@@ -24,6 +24,7 @@ import Image from "next/image"
 export default function PortfolioFr() {
   const [isVisible, setIsVisible] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
+  const [showEmailModal, setShowEmailModal] = useState(false)
 
   const downloadCV = () => {
     // Créer le contenu HTML pour le PDF
@@ -282,6 +283,60 @@ export default function PortfolioFr() {
 
   return (
     <>
+      {/* Email Provider Modal */}
+      {showEmailModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40">
+          <div className="bg-white rounded-xl shadow-2xl p-8 w-[90vw] max-w-md animate-fade-in">
+            <h2 className="text-xl font-bold mb-4 text-slate-800 text-center">Choisissez votre service d'email</h2>
+            <div className="flex flex-col gap-3">
+              <button
+                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium hover:scale-105 transition-transform"
+                onClick={() => {
+                  window.open('https://outlook.live.com/mail/0/deeplink/compose?to=slimchouaib2003@gmail.com&subject=Contact%20depuis%20portfolio', '_blank');
+                  setShowEmailModal(false);
+                }}
+              >
+                <Mail className="w-5 h-5" /> Outlook
+              </button>
+              <button
+                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-red-500 to-pink-500 text-white font-medium hover:scale-105 transition-transform"
+                onClick={() => {
+                  window.open('https://mail.google.com/mail/?view=cm&to=slimchouaib2003@gmail.com&su=Contact%20depuis%20portfolio', '_blank');
+                  setShowEmailModal(false);
+                }}
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 13.065L2.4 6.6A2 2 0 0 1 4 4h16a2 2 0 0 1 1.6 2.6l-9.6 6.465z"/><path d="M22 8.235V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.235l9.6 6.465a2 2 0 0 0 2.4 0L22 8.235z"/></svg>
+                Gmail
+              </button>
+              <button
+                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-medium hover:scale-105 transition-transform"
+                onClick={() => {
+                  window.open('https://compose.mail.yahoo.com/?to=slimchouaib2003@gmail.com&subj=Contact%20depuis%20portfolio', '_blank');
+                  setShowEmailModal(false);
+                }}
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M2 4v16h20V4H2zm18 2v2.586l-8 8-8-8V6h16zm0 12H4v-7.414l8 8 8-8V18z"/></svg>
+                Yahoo
+              </button>
+              <button
+                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-gray-500 to-gray-700 text-white font-medium hover:scale-105 transition-transform"
+                onClick={() => {
+                  window.open('mailto:slimchouaib2003@gmail.com?subject=Contact%20depuis%20portfolio', '_blank');
+                  setShowEmailModal(false);
+                }}
+              >
+                <Mail className="w-5 h-5" /> Autre (App par défaut)
+              </button>
+            </div>
+            <button
+              className="mt-6 w-full py-2 rounded-lg bg-slate-200 text-slate-700 font-medium hover:bg-slate-300 transition-colors"
+              onClick={() => setShowEmailModal(false)}
+            >
+              Annuler
+            </button>
+          </div>
+        </div>
+      )}
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Navigation fixe */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
@@ -323,14 +378,14 @@ export default function PortfolioFr() {
                 <Download className="w-4 h-4 mr-2" />
                 CV PDF
               </a>
-              <a
-                href="mailto:slimchouaib2003@gmail.com?subject=Contact%20depuis%20portfolio"
+              <button
                 className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform focus:outline-none focus:ring-2 focus:ring-blue-500"
                 style={{ textDecoration: 'none' }}
+                onClick={() => setShowEmailModal(true)}
               >
                 <Mail className="w-4 h-4 mr-2" />
                 Contact
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -1058,7 +1113,7 @@ export default function PortfolioFr() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <a
-              href="mailto:slimchouaib2003@gmail.com?subject=Contact%20depuis%20portfolio"
+              href="https://outlook.live.com/mail/0/deeplink/compose?to=slimchouaib2003@gmail.com&subject=Contact%20depuis%20portfolio"
               className="flex flex-col items-center p-6 bg-white/10 rounded-lg hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
               style={{ textDecoration: 'none' }}
             >
@@ -1080,7 +1135,7 @@ export default function PortfolioFr() {
 
           <div className="flex justify-center gap-6">
             <a
-              href="mailto:slimchouaib2003@gmail.com?subject=Contact%20depuis%20portfolio"
+              href="https://outlook.live.com/mail/0/deeplink/compose?to=slimchouaib2003@gmail.com&subject=Contact%20depuis%20portfolio"
               className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-md px-6 py-3 text-lg font-medium hover:scale-105 transition-transform focus:outline-none focus:ring-2 focus:ring-blue-500"
               style={{ textDecoration: 'none' }}
             >
@@ -1128,5 +1183,5 @@ export default function PortfolioFr() {
       </footer>
       </div>
     </>
-  )
+  );
 }
