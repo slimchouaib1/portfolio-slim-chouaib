@@ -22,9 +22,9 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 
 export default function PortfolioFr() {
+  const [showEmailModal, setShowEmailModal] = useState(false);
   const [isVisible, setIsVisible] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
-  const [showEmailModal, setShowEmailModal] = useState(false)
 
   const downloadCV = () => {
     // Créer le contenu HTML pour le PDF
@@ -196,6 +196,11 @@ export default function PortfolioFr() {
           <h3>Microsoft Certified: Azure AI Fundamentals (AI-900)</h3>
           <p class="date">2025</p>
           <p>Validation des bases de l'IA sur Azure, incluant Computer Vision, NLP et services cognitifs.</p>
+        </div>
+        <div class="experience">
+          <h3>Oracle Certified: <span class="font-bold">Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)</span></h3>
+          <p class="date">2025</p>
+          <p>Certification avancée en infrastructure Cloud, incluant l'intégration de l'IA, <i>deep learning</i>, <i>generative AI</i>,<br /> et les solutions de <i>Machine Learning</i> sur Oracle Cloud.</p>
         </div>
       </div>
 
@@ -938,6 +943,7 @@ export default function PortfolioFr() {
                   </p>
                 </CardContent>
               </Card>
+            
 
               <Card className="border-l-4 border-l-orange-500 hover:shadow-xl transition-all duration-300">
                 <CardHeader>
@@ -1022,85 +1028,142 @@ export default function PortfolioFr() {
       </section>
 
       {/* Section Éducation & Certifications */}
+      {/* Section Éducation */}
       <section id="education" className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Éducation & Certifications</h2>
+            <h2 className="text-4xl font-bold text-slate-800 mb-4">Éducation</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto"></div>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-slate-800 mb-6">Éducation</h3>
-              <div className="space-y-6">
-                <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-                  <CardContent className="pt-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <span className="text-blue-600 font-bold text-sm">3A</span>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-slate-800">Ingénierie IA et Data Science</h4>
-                        <p className="text-slate-600">TEK-UP - École Supérieure Privée des Technologies</p>
-                        <p className="text-sm text-slate-500">2023 - Présent (3ème Année)</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-                  <CardContent className="pt-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                        <span className="text-green-600 font-bold text-sm">CP</span>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-slate-800">Cycle Préparatoire Intégré</h4>
-                        <p className="text-slate-600">TEK-UP</p>
-                        <p className="text-sm text-slate-500">2021 - 2023</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-semibold text-slate-800 mb-6">Certifications</h3>
-              <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-lg flex items-center gap-2">
-                    <Cloud className="w-8 h-8 text-blue-600" />
-                    Microsoft Certified: Azure AI Fundamentals (AI-900)
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <Cloud className="w-8 h-8 text-blue-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-slate-800 text-lg">
-                        Microsoft Certified: Azure AI Fundamentals (AI-900)
-                      </h4>
-                      <p className="text-blue-600 font-medium">2025</p>
-                      <p className="text-slate-500 text-sm mt-2">
-                        Validation des fondamentaux de l'IA sur Azure, incluant Computer Vision, NLP et services
-                        cognitifs
-                      </p>
-                      <div className="flex gap-2 mt-3">
-                        <Badge className="bg-blue-100 text-blue-800">Computer Vision</Badge>
-                        <Badge className="bg-blue-100 text-blue-800">NLP</Badge>
-                        <Badge className="bg-blue-100 text-blue-800">Azure</Badge>
-                      </div>
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg flex flex-col h-full justify-between">
+              <CardContent className="pt-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span className="text-blue-600 font-bold text-sm">3A</span>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-800">Ingénierie IA et Data Science</h4>
+                    <p className="text-slate-600">TEK-UP - École Supérieure Privée des Technologies</p>
+                    <p className="text-sm text-slate-500">2023 - Présent (3ème Année)</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg flex flex-col h-full justify-between">
+              <CardContent className="pt-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <span className="text-green-600 font-bold text-sm">CP</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-800">Cycle Préparatoire Intégré</h4>
+                    <p className="text-slate-600">TEK-UP</p>
+                    <p className="text-sm text-slate-500">2021 - 2023</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
+
+ <section id="certifications" className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-slate-800 mb-4">Certifications</h2>
+      <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto"></div>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      {/* Azure Certification Card */}
+      <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+        <CardHeader>
+          <CardTitle className="text-lg flex items-center gap-2">
+            <Cloud className="w-8 h-8 text-blue-600" />
+            Microsoft Certified: Azure AI Fundamentals (AI-900)
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="pt-6">
+          <div className="flex items-start gap-4">
+            <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
+              <Cloud className="w-8 h-8 text-blue-600" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-slate-800 text-lg">
+                Microsoft Certified: Azure AI Fundamentals (AI-900)
+              </h4>
+              <p className="text-blue-500 font-medium">2025</p>
+              <p className="text-slate-500 text-sm mt-2">
+                Validation des bases de l'IA sur Azure, incluant Computer Vision, NLP et services cognitifs.
+              </p>
+              <div className="flex gap-2 mt-3 flex-wrap">
+                <Badge className="bg-blue-100 text-blue-800">Cloud</Badge>
+                <Badge className="bg-blue-100 text-blue-800">AI</Badge>
+                <Badge className="bg-blue-100 text-blue-800">Machine Learning</Badge>
+                <Badge className="bg-blue-100 text-blue-800">NLP</Badge>
+                <Badge className="bg-blue-100 text-blue-800">Computer Vision</Badge>
+                <Badge className="bg-blue-100 text-blue-800">Generative AI</Badge>
+                <Badge className="bg-blue-100 text-blue-800">Azure</Badge>
+              </div>
+              <a
+                href="/Azure-AI-900.pdf"
+                download
+                className="inline-flex items-center border border-blue-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-blue-50 mt-4"
+                style={{ textDecoration: 'none' }}
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Télécharger le certificat
+              </a>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Oracle Certification Card */}
+      <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+        <CardHeader>
+          <CardTitle className="text-lg flex items-center gap-2">
+            <Cloud className="w-8 h-8 text-orange-500" />
+            Oracle Certified: Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="pt-6">
+          <div className="flex items-start gap-4">
+            <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center">
+              <Cloud className="w-8 h-8 text-orange-500" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-slate-800 text-lg">
+                Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)
+              </h4>
+              <p className="text-orange-500 font-medium">2025</p>
+              <p className="text-slate-500 text-sm mt-2">
+                Certification avancée en infrastructure Cloud, incluant l'intégration de l'IA, <i>deep learning</i>, <i>generative AI</i>,<br /> et les solutions de <i>Machine Learning</i> sur Oracle Cloud.
+              </p>
+              <div className="flex gap-2 mt-3 flex-wrap">
+                <Badge className="bg-orange-100 text-orange-800">Cloud</Badge>
+                <Badge className="bg-orange-100 text-orange-800">AI</Badge>
+                <Badge className="bg-orange-100 text-orange-800">Machine Learning</Badge>
+                <Badge className="bg-orange-100 text-orange-800">Deep Learning</Badge>
+                <Badge className="bg-orange-100 text-orange-800">Generative AI</Badge>
+                <Badge className="bg-orange-100 text-orange-800">Oracle</Badge>
+              </div>
+              <a
+                href="/Oracle-AI-Foundations.pdf"
+                download
+                className="inline-flex items-center border border-orange-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-orange-50 mt-4"
+                style={{ textDecoration: 'none' }}
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Télécharger le certificat
+              </a>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
 
       {/* Section Contact */}
       <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900 text-white">
