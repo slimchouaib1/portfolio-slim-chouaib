@@ -1197,14 +1197,14 @@ export default function PortfolioFr() {
           </div>
 
           <div className="flex justify-center gap-6">
-            <a
-              href="https://outlook.live.com/mail/0/deeplink/compose?to=slimchouaib2003@gmail.com&subject=Contact%20depuis%20portfolio"
+            <button
               className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-md px-6 py-3 text-lg font-medium hover:scale-105 transition-transform focus:outline-none focus:ring-2 focus:ring-blue-500"
               style={{ textDecoration: 'none' }}
+              onClick={() => setShowEmailModal(true)}
             >
               <Mail className="w-5 h-5 mr-2" />
               Me Contacter
-            </a>
+            </button>
             <a
               href="/SlimChouaib-CV.pdf"
               download
