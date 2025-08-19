@@ -1074,7 +1074,7 @@ export default function PortfolioFr() {
       <h2 className="text-4xl font-bold text-slate-800 mb-4">Certifications</h2>
       <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto"></div>
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
       {/* Azure Certification Card */}
       <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
         <CardHeader>
@@ -1156,6 +1156,51 @@ export default function PortfolioFr() {
               >
                 <Download className="w-4 h-4 mr-2" />
                 Télécharger le certificat
+              </a>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Neo4j Certification Card */}
+      <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+        <CardHeader>
+          <CardTitle className="text-lg flex items-center gap-2">
+            <Database className="w-8 h-8 text-green-600" />
+            Neo4j Certified Professional
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="pt-6">
+          <div className="flex items-start gap-4">
+            <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center">
+              <Database className="w-8 h-8 text-green-600" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-slate-800 text-lg">
+                Neo4j Certified Professional
+              </h4>
+              <p className="text-green-600 font-medium">2025</p>
+              <p className="text-slate-500 text-sm mt-2">
+                Certification professionnelle Neo4j validant l'expertise en bases de données graphiques, 
+                requêtes Cypher, modélisation de données relationnelles et développement d'applications graphiques.
+              </p>
+              <div className="flex gap-2 mt-3 flex-wrap">
+                <Badge className="bg-green-100 text-green-800">Graph Database</Badge>
+                <Badge className="bg-green-100 text-green-800">Cypher</Badge>
+                <Badge className="bg-green-100 text-green-800">Neo4j</Badge>
+                <Badge className="bg-green-100 text-green-800">Data Modeling</Badge>
+                <Badge className="bg-green-100 text-green-800">Graph Analytics</Badge>
+                <Badge className="bg-green-100 text-green-800">NoSQL</Badge>
+              </div>
+              <a
+                href="https://graphacademy.neo4j.com/c/190d2bf2-ecea-49cb-a10f-683b4f4f8ca4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center border border-green-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-green-50 mt-4"
+                style={{ textDecoration: 'none' }}
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Voir le certificat
               </a>
             </div>
           </div>
