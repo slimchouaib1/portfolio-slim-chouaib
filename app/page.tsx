@@ -18,6 +18,7 @@ import {
   Database,
   ChevronDown,
   Play,
+  FileText,
 } from "lucide-react"
 import { useState, useEffect } from "react"
 import Image from "next/image"
@@ -25,6 +26,7 @@ import Image from "next/image"
 export default function PortfolioFr() {
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [showDemoModal, setShowDemoModal] = useState(false);
+  const [showMemoraModal, setShowMemoraModal] = useState(false);
   const [isVisible, setIsVisible] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
 
@@ -713,16 +715,25 @@ export default function PortfolioFr() {
                     </Badge>
                   ))}
                 </div>
-                <a
-                  href="https://github.com/slimchouaib1/Memora-R-Project"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center w-full justify-center border border-purple-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent group-hover:bg-purple-50"
-                  style={{ textDecoration: 'none' }}
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Voir le projet
-                </a>
+                <div className="flex gap-2">
+                  <a
+                    href="https://github.com/slimchouaib1/Memora-R-Project"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center flex-1 justify-center border border-purple-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent group-hover:bg-purple-50"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Voir le projet
+                  </a>
+                  <button
+                    onClick={() => setShowMemoraModal(true)}
+                    className="inline-flex items-center flex-1 justify-center border border-purple-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-purple-500 text-white hover:bg-purple-600"
+                  >
+                    <FileText className="w-4 h-4 mr-2" />
+                    Voir le rapport
+                  </button>
+                </div>
               </CardContent>
             </Card>
 
@@ -1324,6 +1335,31 @@ export default function PortfolioFr() {
                 <source src="/Biguard Demo.mp4" type="video/mp4" />
                 Votre navigateur ne supporte pas la lecture de vidéos.
               </video>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Memora PDF Modal */}
+      {showMemoraModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg max-w-5xl w-full max-h-[90vh] overflow-hidden">
+            <div className="flex justify-between items-center p-4 border-b">
+              <h3 className="text-xl font-semibold text-slate-800">MEMORA 2025 - Rapport du Projet</h3>
+              <button
+                onClick={() => setShowMemoraModal(false)}
+                className="text-slate-500 hover:text-slate-700 text-2xl font-bold"
+              >
+                ×
+              </button>
+            </div>
+            <div className="p-4">
+              <iframe
+                src="/Rapport.pdf"
+                className="w-full rounded-lg"
+                style={{ height: '75vh' }}
+                title="Rapport MEMORA 2025"
+              />
             </div>
           </div>
         </div>
