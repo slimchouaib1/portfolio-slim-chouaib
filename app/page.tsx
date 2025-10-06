@@ -19,6 +19,7 @@ import {
   ChevronDown,
   Play,
   FileText,
+  Eye,
 } from "lucide-react"
 import { useState, useEffect } from "react"
 import Image from "next/image"
@@ -27,6 +28,7 @@ export default function PortfolioFr() {
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [showDemoModal, setShowDemoModal] = useState(false);
   const [showMemoraModal, setShowMemoraModal] = useState(false);
+  const [showCVModal, setShowCVModal] = useState(false);
   const [isVisible, setIsVisible] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
 
@@ -378,15 +380,13 @@ export default function PortfolioFr() {
             </div>
 
             <div className="flex gap-3">
-              <a
-                href="/SlimChouaib-CV.pdf"
-                download
+              <button
+                onClick={() => setShowCVModal(true)}
                 className="inline-flex items-center border border-slate-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                style={{ textDecoration: 'none' }}
               >
-                <Download className="w-4 h-4 mr-2" />
-                CV PDF
-              </a>
+                <Eye className="w-4 h-4 mr-2" />
+                Prévisualiser CV
+              </button>
               <button
                 className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform focus:outline-none focus:ring-2 focus:ring-blue-500"
                 style={{ textDecoration: 'none' }}
@@ -1272,15 +1272,13 @@ export default function PortfolioFr() {
               <Mail className="w-5 h-5 mr-2" />
               Me Contacter
             </button>
-            <a
-              href="/SlimChouaib-CV.pdf"
-              download
+            <button
+              onClick={() => setShowCVModal(true)}
               className="inline-flex items-center border border-slate-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              style={{ textDecoration: 'none' }}
             >
-              <Download className="w-4 h-4 mr-2" />
-              Télécharger CV
-            </a>
+              <Eye className="w-4 h-4 mr-2" />
+              Prévisualiser CV
+            </button>
             <a
               href="https://github.com/slimchouaib1"
               target="_blank"
@@ -1359,6 +1357,50 @@ export default function PortfolioFr() {
                 className="w-full rounded-lg"
                 style={{ height: '75vh' }}
                 title="Rapport MEMORA 2025"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* CV Preview Modal */}
+      {showCVModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg max-w-5xl w-full max-h-[90vh] overflow-hidden">
+            <div className="flex justify-between items-center p-4 border-b bg-slate-50">
+              <h3 className="text-xl font-semibold text-slate-800">CV Preview - Slim Chouaib</h3>
+              <div className="flex items-center gap-3">
+                <a
+                  href="/SlimChouaib-CV.pdf"
+                  download
+                  className="inline-flex items-center bg-blue-600 text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-700 transition-colors"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Download
+                </a>
+                <a
+                  href="/SlimChouaib-CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center border border-slate-300 rounded-md px-3 py-2 text-sm font-medium hover:bg-slate-100 transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Open in New Tab
+                </a>
+                <button
+                  onClick={() => setShowCVModal(false)}
+                  className="text-slate-500 hover:text-slate-700 text-2xl font-bold ml-2"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+            <div className="p-4">
+              <iframe
+                src="/SlimChouaib-CV.pdf"
+                className="w-full rounded-lg border"
+                style={{ height: '75vh' }}
+                title="CV Slim Chouaib"
               />
             </div>
           </div>
