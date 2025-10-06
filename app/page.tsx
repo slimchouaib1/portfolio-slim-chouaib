@@ -17,12 +17,14 @@ import {
   Cloud,
   Database,
   ChevronDown,
+  Play,
 } from "lucide-react"
 import { useState, useEffect } from "react"
 import Image from "next/image"
 
 export default function PortfolioFr() {
   const [showEmailModal, setShowEmailModal] = useState(false);
+  const [showDemoModal, setShowDemoModal] = useState(false);
   const [isVisible, setIsVisible] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
 
@@ -782,16 +784,25 @@ export default function PortfolioFr() {
                     </Badge>
                   ))}
                 </div>
-                <a
-                  href="https://github.com/slimchouaib1/BiGuard-AI-Project"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center w-full justify-center border border-orange-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent group-hover:bg-orange-50"
-                  style={{ textDecoration: 'none' }}
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Voir le projet
-                </a>
+                <div className="flex gap-2">
+                  <a
+                    href="https://github.com/slimchouaib1/BiGuard-AI-Project"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center flex-1 justify-center border border-orange-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent group-hover:bg-orange-50"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Voir le projet
+                  </a>
+                  <button
+                    onClick={() => setShowDemoModal(true)}
+                    className="inline-flex items-center flex-1 justify-center border border-orange-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-orange-500 text-white hover:bg-orange-600"
+                  >
+                    <Play className="w-4 h-4 mr-2" />
+                    Voir la démo
+                  </button>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -1289,6 +1300,34 @@ export default function PortfolioFr() {
           <p>&copy; 2025 Slim Chouaib. Tous droits réservés.</p>
         </div>
       </footer>
+
+      {/* Demo Modal */}
+      {showDemoModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div className="flex justify-between items-center p-4 border-b">
+              <h3 className="text-xl font-semibold text-slate-800">BiGuard - Démo de l'Application</h3>
+              <button
+                onClick={() => setShowDemoModal(false)}
+                className="text-slate-500 hover:text-slate-700 text-2xl font-bold"
+              >
+                ×
+              </button>
+            </div>
+            <div className="p-4">
+              <video
+                controls
+                autoPlay
+                className="w-full h-auto rounded-lg"
+                style={{ maxHeight: '70vh' }}
+              >
+                <source src="/Biguard Demo.mp4" type="video/mp4" />
+                Votre navigateur ne supporte pas la lecture de vidéos.
+              </video>
+            </div>
+          </div>
+        </div>
+      )}
       </div>
     </>
   );
