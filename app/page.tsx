@@ -208,6 +208,11 @@ export default function PortfolioFr() {
           <p class="date">2025</p>
           <p>Certification avancée en infrastructure Cloud, incluant l'intégration de l'IA, <i>deep learning</i>, <i>generative AI</i>,<br /> et les solutions de <i>Machine Learning</i> sur Oracle Cloud.</p>
         </div>
+        <div class="experience">
+          <h3>Oracle Certified: <span class="font-bold">Oracle Cloud Infrastructure 2025 Generative AI Professional (1Z0-1127-25)</span></h3>
+          <p class="date">2025</p>
+          <p>Certification professionnelle avancée en IA générative sur Oracle Cloud, incluant les LLMs, RAG,<br /> agents conversationnels et l'intégration avec Oracle Database 23ai.</p>
+        </div>
       </div>
 
       <div class="section">
@@ -1096,7 +1101,7 @@ export default function PortfolioFr() {
       <h2 className="text-4xl font-bold text-slate-800 mb-4">Certifications</h2>
       <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto"></div>
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
       {/* Azure Certification Card */}
       <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
         <CardHeader>
@@ -1141,12 +1146,12 @@ export default function PortfolioFr() {
         </CardContent>
       </Card>
 
-      {/* Oracle Certification Card */}
+      {/* Oracle AI Foundations Certification Card */}
       <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
         <CardHeader>
           <CardTitle className="text-lg flex items-center gap-2">
             <Cloud className="w-8 h-8 text-orange-500" />
-            Oracle Certified: Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)
+            Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)
           </CardTitle>
         </CardHeader>
         <CardContent className="pt-6">
@@ -1174,6 +1179,50 @@ export default function PortfolioFr() {
                 href="/Oracle-AI-Foundations.pdf"
                 download
                 className="inline-flex items-center border border-orange-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-orange-50 mt-4"
+                style={{ textDecoration: 'none' }}
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Télécharger le certificat
+              </a>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Oracle Generative AI Professional Certification Card */}
+      <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+        <CardHeader>
+          <CardTitle className="text-lg flex items-center gap-2">
+            <Brain className="w-8 h-8 text-red-600" />
+            Oracle Cloud Infrastructure 2025 Generative AI Professional (1Z0-1127-25)
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="pt-6">
+          <div className="flex items-start gap-4">
+            <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center">
+              <Brain className="w-8 h-8 text-red-600" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-slate-800 text-lg">
+                Oracle Cloud Infrastructure 2025 Generative AI Professional (1Z0-1127-25)
+              </h4>
+              <p className="text-red-600 font-medium">2025</p>
+              <p className="text-slate-500 text-sm mt-2">
+                Certification professionnelle avancée en IA générative sur Oracle Cloud, incluant les LLMs, RAG, 
+                agents conversationnels et l'intégration avec Oracle Database 23ai.
+              </p>
+              <div className="flex gap-2 mt-3 flex-wrap">
+                <Badge className="bg-red-100 text-red-800">Generative AI</Badge>
+                <Badge className="bg-red-100 text-red-800">LLMs</Badge>
+                <Badge className="bg-red-100 text-red-800">RAG</Badge>
+                <Badge className="bg-red-100 text-red-800">AI Agents</Badge>
+                <Badge className="bg-red-100 text-red-800">Oracle Cloud</Badge>
+                <Badge className="bg-red-100 text-red-800">LangChain</Badge>
+              </div>
+              <a
+                href="/Oracle-Generative-AI-Professional.pdf"
+                download
+                className="inline-flex items-center border border-red-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-red-50 mt-4"
                 style={{ textDecoration: 'none' }}
               >
                 <Download className="w-4 h-4 mr-2" />
