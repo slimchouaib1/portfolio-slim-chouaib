@@ -1177,14 +1177,13 @@ export default function PortfolioFr() {
                 <Badge className="bg-red-100 text-red-800">LangChain</Badge>
               </div>
               <a
-                href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=4C8B0E6E2B7A8E2A4E5E9F8F7E6E5E4E3E2E1E0E9F8F7E6E5E4E3E2E1E0E"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/Oracle-Generative-AI-Professional.pdf"
+                download
                 className="inline-flex items-center border border-red-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-red-50 mt-4"
                 style={{ textDecoration: 'none' }}
               >
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Voir le certificat
+                <Download className="w-4 h-4 mr-2" />
+                Télécharger le certificat
               </a>
             </div>
           </div>
