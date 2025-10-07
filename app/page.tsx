@@ -29,8 +29,115 @@ export default function PortfolioFr() {
   const [showDemoModal, setShowDemoModal] = useState(false);
   const [showMemoraModal, setShowMemoraModal] = useState(false);
   const [showCVModal, setShowCVModal] = useState(false);
+  const [language, setLanguage] = useState("french"); // "french" or "english"
   const [isVisible, setIsVisible] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
+
+  // Language content object
+  const content = {
+    french: {
+      nav: {
+        home: "Accueil",
+        about: "À Propos",
+        experience: "Expérience",
+        projects: "Projets",
+        skills: "Compétences",
+        contact: "Contact",
+        previewCV: "Prévisualiser CV"
+      },
+      hero: {
+        role: "Président Fortum Junior Entreprise",
+        title: "Étudiant Ingénieur en IA & Data Science",
+        description: "Passionné par la construction de solutions IA innovantes et la transformation d'idées en applications concrètes et efficaces. Actuellement en 3ème année d'ingénierie, alliant leadership et innovation au quotidien.",
+        viewProjects: "Voir mes projets",
+        learnMore: "En savoir plus"
+      },
+      about: {
+        title: "À Propos de Moi",
+        description1: "Je suis un étudiant passionné qui vise l'excellence dans tout ce que j'entreprends. Mon ambition est de bâtir un parcours où mon nom résonne dans le domaine de la Data et de l'IA, reconnu pour mes compétences techniques et ma capacité à transformer les idées en solutions concrètes et efficaces.",
+        description2: "Je veux être quelqu'un dont les réalisations parlent d'elles-mêmes et inspirent confiance aux équipes et entreprises avec qui je collabore. En tant que Président de Fortum Junior Entreprise, j'allie leadership et innovation au quotidien, dirigeant des projets qui ont un impact réel.",
+        development: "Développement",
+        developmentDesc: "Full-Stack & IA",
+        leadership: "Leadership",
+        leadershipDesc: "Président FJE"
+      },
+      experience: {
+        title: "Expérience Professionnelle"
+      },
+      projects: {
+        title: "Projets Clés"
+      },
+      skills: {
+        title: "Compétences"
+      },
+      certifications: {
+        title: "Certifications",
+        download: "Télécharger le certificat",
+        view: "Voir le certificat"
+      },
+      contact: {
+        title: "Travaillons Ensemble",
+        description: "Je suis toujours intéressé par de nouvelles opportunités et des projets stimulants. Discutons de la façon dont je peux contribuer au succès de votre équipe.",
+        email: "Email",
+        phone: "Téléphone",
+        location: "Localisation",
+        contactMe: "Me Contacter"
+      },
+      cvFile: "/Slim_Chouaib_CV.pdf"
+    },
+    english: {
+      nav: {
+        home: "Home",
+        about: "About",
+        experience: "Experience",
+        projects: "Projects",
+        skills: "Skills",
+        contact: "Contact",
+        previewCV: "Preview CV"
+      },
+      hero: {
+        role: "President Fortum Junior Enterprise",
+        title: "AI & Data Science Engineering Student",
+        description: "Passionate about building innovative AI solutions and transforming ideas into concrete and efficient applications. Currently in 3rd year of engineering, combining leadership and innovation on a daily basis.",
+        viewProjects: "View my projects",
+        learnMore: "Learn more"
+      },
+      about: {
+        title: "About Me",
+        description1: "I am a passionate student who aims for excellence in everything I undertake. My ambition is to build a career where my name resonates in the field of Data and AI, recognized for my technical skills and ability to transform ideas into concrete and efficient solutions.",
+        description2: "I want to be someone whose achievements speak for themselves and inspire confidence in the teams and companies I collaborate with. As President of Fortum Junior Enterprise, I combine leadership and innovation daily, leading projects that have real impact.",
+        development: "Development",
+        developmentDesc: "Full-Stack & AI",
+        leadership: "Leadership",
+        leadershipDesc: "FJE President"
+      },
+      experience: {
+        title: "Professional Experience"
+      },
+      projects: {
+        title: "Key Projects"
+      },
+      skills: {
+        title: "Skills"
+      },
+      certifications: {
+        title: "Certifications",
+        download: "Download certificate",
+        view: "View certificate"
+      },
+      contact: {
+        title: "Let's Work Together",
+        description: "I'm always interested in new opportunities and challenging projects. Let's discuss how I can contribute to your team's success.",
+        email: "Email",
+        phone: "Phone",
+        location: "Location",
+        contactMe: "Contact Me"
+      },
+      cvFile: "/Slim_Chouaib_Resume.pdf"
+    }
+  }
+
+  const t = content[language as keyof typeof content]
 
   const downloadCV = () => {
     // Créer le contenu HTML pour le PDF
@@ -366,11 +473,11 @@ export default function PortfolioFr() {
 
             <div className="hidden md:flex space-x-8">
               {[
-                { id: "hero", label: "Accueil" },
-                { id: "about", label: "À Propos" },
-                { id: "experience", label: "Expérience" },
-                { id: "projects", label: "Projets" },
-                { id: "skills", label: "Compétences" },
+                { id: "hero", label: t.nav.home },
+                { id: "about", label: t.nav.about },
+                { id: "experience", label: t.nav.experience },
+                { id: "projects", label: t.nav.projects },
+                { id: "skills", label: t.nav.skills },
               ].map((item) => (
                 <button
                   key={item.id}
@@ -384,13 +491,37 @@ export default function PortfolioFr() {
               ))}
             </div>
 
-            <div className="flex gap-3">
+            <div className="flex gap-3 items-center">
+              {/* Language Toggle */}
+              <div className="flex items-center bg-slate-100 rounded-lg p-1">
+                <button
+                  onClick={() => setLanguage("french")}
+                  className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+                    language === "french" 
+                      ? "bg-white text-blue-600 shadow-sm" 
+                      : "text-slate-600 hover:text-slate-800"
+                  }`}
+                >
+                  FR
+                </button>
+                <button
+                  onClick={() => setLanguage("english")}
+                  className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+                    language === "english" 
+                      ? "bg-white text-blue-600 shadow-sm" 
+                      : "text-slate-600 hover:text-slate-800"
+                  }`}
+                >
+                  EN
+                </button>
+              </div>
+              
               <button
                 onClick={() => setShowCVModal(true)}
                 className="inline-flex items-center border border-slate-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <Eye className="w-4 h-4 mr-2" />
-                Prévisualiser CV
+                {t.nav.previewCV}
               </button>
               <button
                 className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -398,7 +529,7 @@ export default function PortfolioFr() {
                 onClick={() => setShowEmailModal(true)}
               >
                 <Mail className="w-4 h-4 mr-2" />
-                Contact
+                {t.nav.contact}
               </button>
             </div>
           </div>
@@ -415,7 +546,7 @@ export default function PortfolioFr() {
             <div className="space-y-4">
               <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                 <Award className="w-4 h-4 mr-2" />
-                Président Fortum Junior Entreprise
+                {t.hero.role}
               </div>
 
               <h1 className="text-5xl lg:text-6xl font-bold text-slate-800 leading-tight">
@@ -426,13 +557,11 @@ export default function PortfolioFr() {
               </h1>
 
               <p className="text-xl text-slate-600 leading-relaxed">
-                Étudiant Ingénieur en <span className="font-semibold text-blue-600">IA & Data Science</span>
+                {t.hero.title}
               </p>
 
               <p className="text-lg text-slate-500 leading-relaxed max-w-2xl">
-                Passionné par la construction de solutions IA innovantes et la transformation d'idées en applications
-                concrètes et efficaces. Actuellement en 3ème année d'ingénierie, alliant leadership et innovation au
-                quotidien.
+                {t.hero.description}
               </p>
             </div>
 
@@ -474,7 +603,7 @@ export default function PortfolioFr() {
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:scale-105 transition-transform"
                 onClick={() => scrollToSection("projects")}
               >
-                Voir mes projets
+                {t.hero.viewProjects}
               </Button>
               <Button
                 variant="outline"
@@ -482,7 +611,7 @@ export default function PortfolioFr() {
                 className="hover:scale-105 transition-transform bg-transparent"
                 onClick={() => scrollToSection("about")}
               >
-                En savoir plus
+                {t.hero.learnMore}
               </Button>
             </div>
           </div>
@@ -521,36 +650,30 @@ export default function PortfolioFr() {
       <section id="about" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">À Propos de Moi</h2>
+            <h2 className="text-4xl font-bold text-slate-800 mb-4">{t.about.title}</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto"></div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-slate-600 leading-relaxed">
-                Je suis un étudiant passionné qui vise l'excellence dans tout ce que j'entreprends. Mon ambition est de
-                bâtir un parcours où mon nom résonne dans le domaine de la{" "}
-                <span className="font-semibold text-blue-600">Data et de l'IA</span>, reconnu pour mes compétences
-                techniques et ma capacité à transformer les idées en solutions concrètes et efficaces.
+                {t.about.description1}
               </p>
 
               <p className="text-lg text-slate-600 leading-relaxed">
-                Je veux être quelqu'un dont les réalisations parlent d'elles-mêmes et inspirent confiance aux équipes et
-                entreprises avec qui je collabore. En tant que{" "}
-                <span className="font-semibold text-blue-600">Président de Fortum Junior Entreprise</span>, j'allie
-                leadership et innovation au quotidien, dirigeant des projets qui ont un impact réel.
+                {t.about.description2}
               </p>
 
               <div className="grid grid-cols-2 gap-6 mt-8">
                 <div className="text-center p-4 bg-blue-50 rounded-lg hover:scale-105 transition-transform">
                   <Code className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                  <h3 className="font-semibold text-slate-800">Développement</h3>
-                  <p className="text-sm text-slate-600">Full-Stack & IA</p>
+                  <h3 className="font-semibold text-slate-800">{t.about.development}</h3>
+                  <p className="text-sm text-slate-600">{t.about.developmentDesc}</p>
                 </div>
                 <div className="text-center p-4 bg-indigo-50 rounded-lg hover:scale-105 transition-transform">
                   <Users className="w-8 h-8 text-indigo-600 mx-auto mb-2" />
-                  <h3 className="font-semibold text-slate-800">Leadership</h3>
-                  <p className="text-sm text-slate-600">Président FJE</p>
+                  <h3 className="font-semibold text-slate-800">{t.about.leadership}</h3>
+                  <p className="text-sm text-slate-600">{t.about.leadershipDesc}</p>
                 </div>
               </div>
             </div>
@@ -578,7 +701,7 @@ export default function PortfolioFr() {
       <section id="experience" className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Expérience Professionnelle</h2>
+            <h2 className="text-4xl font-bold text-slate-800 mb-4">{t.experience.title}</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto"></div>
           </div>
 
@@ -655,7 +778,7 @@ export default function PortfolioFr() {
       <section id="projects" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Projets Clés</h2>
+            <h2 className="text-4xl font-bold text-slate-800 mb-4">{t.projects.title}</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto"></div>
           </div>
 
@@ -1098,7 +1221,7 @@ export default function PortfolioFr() {
  <section id="certifications" className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
   <div className="max-w-6xl mx-auto">
     <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold text-slate-800 mb-4">Certifications</h2>
+      <h2 className="text-4xl font-bold text-slate-800 mb-4">{t.certifications.title}</h2>
       <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto"></div>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
@@ -1139,7 +1262,7 @@ export default function PortfolioFr() {
                 style={{ textDecoration: 'none' }}
               >
                 <Download className="w-4 h-4 mr-2" />
-                Télécharger le certificat
+                {t.certifications.download}
               </a>
             </div>
           </div>
@@ -1183,7 +1306,7 @@ export default function PortfolioFr() {
                 style={{ textDecoration: 'none' }}
               >
                 <Download className="w-4 h-4 mr-2" />
-                Télécharger le certificat
+                {t.certifications.download}
               </a>
             </div>
           </div>
@@ -1226,7 +1349,7 @@ export default function PortfolioFr() {
                 style={{ textDecoration: 'none' }}
               >
                 <Download className="w-4 h-4 mr-2" />
-                Télécharger le certificat
+                {t.certifications.download}
               </a>
             </div>
           </div>
@@ -1271,7 +1394,7 @@ export default function PortfolioFr() {
                 style={{ textDecoration: 'none' }}
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
-                Voir le certificat
+                {t.certifications.view}
               </a>
             </div>
           </div>
@@ -1284,10 +1407,9 @@ export default function PortfolioFr() {
       {/* Section Contact */}
       <section className="py-20 px-4 bg-gradient-to-r from-slate-800 to-slate-900 text-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8">Travaillons Ensemble</h2>
+          <h2 className="text-4xl font-bold mb-8">{t.contact.title}</h2>
           <p className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto">
-            Je suis toujours intéressé par de nouvelles opportunités et des projets stimulants. Discutons de la façon
-            dont je peux contribuer au succès de votre équipe.
+            {t.contact.description}
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -1297,17 +1419,17 @@ export default function PortfolioFr() {
               style={{ textDecoration: 'none' }}
             >
               <Mail className="w-8 h-8 mb-4 text-blue-400" />
-              <h3 className="font-semibold mb-2">Email</h3>
+              <h3 className="font-semibold mb-2">{t.contact.email}</h3>
               <p className="text-slate-300">slimchouaib2003@gmail.com</p>
             </a>
             <div className="flex flex-col items-center p-6 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
               <Phone className="w-8 h-8 mb-4 text-green-400" />
-              <h3 className="font-semibold mb-2">Téléphone</h3>
+              <h3 className="font-semibold mb-2">{t.contact.phone}</h3>
               <p className="text-slate-300">+216 55588192</p>
             </div>
             <div className="flex flex-col items-center p-6 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
               <MapPin className="w-8 h-8 mb-4 text-red-400" />
-              <h3 className="font-semibold mb-2">Localisation</h3>
+              <h3 className="font-semibold mb-2">{t.contact.location}</h3>
               <p className="text-slate-300">Manar 2, Ariana, Tunisie</p>
             </div>
           </div>
@@ -1319,14 +1441,14 @@ export default function PortfolioFr() {
               onClick={() => setShowEmailModal(true)}
             >
               <Mail className="w-5 h-5 mr-2" />
-              Me Contacter
+              {t.contact.contactMe}
             </button>
             <button
               onClick={() => setShowCVModal(true)}
               className="inline-flex items-center border border-slate-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <Eye className="w-4 h-4 mr-2" />
-              Prévisualiser CV
+              {t.nav.previewCV}
             </button>
             <a
               href="https://github.com/slimchouaib1"
@@ -1417,24 +1539,26 @@ export default function PortfolioFr() {
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-lg max-w-5xl w-full max-h-[90vh] overflow-hidden">
             <div className="flex justify-between items-center p-4 border-b bg-slate-50">
-              <h3 className="text-xl font-semibold text-slate-800">CV Preview - Slim Chouaib</h3>
+              <h3 className="text-xl font-semibold text-slate-800">
+                {language === "french" ? "CV Preview - Slim Chouaib" : "Resume Preview - Slim Chouaib"}
+              </h3>
               <div className="flex items-center gap-3">
                 <a
-                  href="/SlimChouaib-CV.pdf"
+                  href={t.cvFile}
                   download
                   className="inline-flex items-center bg-blue-600 text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-700 transition-colors"
                 >
                   <Download className="w-4 h-4 mr-2" />
-                  Download
+                  {language === "french" ? "Télécharger" : "Download"}
                 </a>
                 <a
-                  href="/SlimChouaib-CV.pdf"
+                  href={t.cvFile}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center border border-slate-300 rounded-md px-3 py-2 text-sm font-medium hover:bg-slate-100 transition-colors"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  Open in New Tab
+                  {language === "french" ? "Ouvrir dans un nouvel onglet" : "Open in New Tab"}
                 </a>
                 <button
                   onClick={() => setShowCVModal(false)}
@@ -1446,10 +1570,10 @@ export default function PortfolioFr() {
             </div>
             <div className="p-4">
               <iframe
-                src="/SlimChouaib-CV.pdf"
+                src={t.cvFile}
                 className="w-full rounded-lg border"
                 style={{ height: '75vh' }}
-                title="CV Slim Chouaib"
+                title={language === "french" ? "CV Slim Chouaib" : "Resume Slim Chouaib"}
               />
             </div>
           </div>
