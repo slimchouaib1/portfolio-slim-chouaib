@@ -62,18 +62,135 @@ export default function PortfolioFr() {
         leadershipDesc: "Président FJE"
       },
       experience: {
-        title: "Expérience Professionnelle"
+        title: "Expérience Professionnelle",
+        biGuard: {
+          title: "Développeur IA et Data Engineering",
+          company: "BiGuard - Biware",
+          date: "Juin - Août 2025",
+          description: "Application d'Assistant Financier Intelligent",
+          tasks: [
+            "Développement complet d'une application web de gestion budgétaire avec recommandations automatiques",
+            "Mise en place d'un clustering intelligent pour classifier automatiquement les transactions",
+            "Conception de modèles d'anomaly detection pour identifier des comportements financiers suspects",
+            "Création d'un chatbot interactif pour accompagner les utilisateurs",
+            "Déploiement cloud sur Microsoft Azure avec APIs, bases de données et pipelines"
+          ],
+          technologies: ["Python", "Scikit-Learn", "Flask", "React.js", "Azure", "SQL", "Plaid API"]
+        },
+        bfpme: {
+          title: "Développeur d'Application RH",
+          company: "Banque de Financement des PME (BFPME)",
+          date: "Juin - Août 2024",
+          tasks: [
+            "Développement d'une application de gestion des congés personnalisable",
+            "Implémentation de la reconnaissance faciale pour l'authentification",
+            "Personnalisation des rôles, départements et hiérarchies"
+          ],
+          technologies: ["Java", "JavaFX", "MySQL", "AWS Rekognition"]
+        }
       },
       projects: {
-        title: "Projets Clés"
+        title: "Projets Clés",
+        nsmVision: {
+          title: "NSM VISION 2025",
+          subtitle: "Plateforme SaaS de gestion et d'analyse du crédit pour les PME",
+          tasks: [
+            "Solution cloud pour automatiser l'analyse des risques de crédit via IA et ML",
+            "Tableaux de bord interactifs et reporting via Power BI",
+            "Chatbot intelligent pour guider les demandes de crédit",
+            "Architecture évolutive et sécurisée"
+          ],
+          technologies: ["AWS", "Python", "Django", "React.js", "MongoDB", "Power BI"],
+          viewProject: "Voir le projet"
+        },
+        memora: {
+          title: "MEMORA 2025",
+          subtitle: "Système d'aide à la décision pour le diagnostic d'Alzheimer",
+          tasks: [
+            "Développement d'un système pour prédire la maladie d'Alzheimer à partir de données cliniques",
+            "Intégration de clustering non supervisé pour améliorer les performances des modèles",
+            "Création d'une interface web avec Shiny pour la saisie des données et la prédiction"
+          ],
+          technologies: ["R", "Random Forest", "KNN", "SVM", "Shiny", "Python"],
+          viewReport: "Voir le rapport"
+        },
+        aiHealthcare: {
+          title: "AI Healthcare Assistant 2025",
+          subtitle: "Hackathon - Assistant IA pour les professionnels de santé",
+          tasks: [
+            "Création d'un assistant IA pour répondre aux questions médicales et assister dans les diagnostics",
+            "Développement d'une application d'automatisation des flux de travail avec modèles IA",
+            "Interface de gestion des tâches et automatisation des décisions"
+          ],
+          technologies: ["Python", "Llama", "OpenAI", "NLP", "Hugging Face", "TensorFlow", "Flask"],
+          viewDemo: "Voir la démo"
+        },
+        biGuard: {
+          title: "BiGuard Application",
+          subtitle: "Assistant Financier Intelligent avec ML",
+          tasks: [
+            "Gestion budgétaire avec recommandations automatiques",
+            "Classification intelligente des transactions par clustering",
+            "Détection d'anomalies pour comportements suspects",
+            "Chatbot interactif pour guidance financière"
+          ],
+          technologies: ["Python", "Scikit-Learn", "Flask", "React.js", "Azure"],
+          viewProject: "Voir le projet",
+          viewDemo: "Voir la démo"
+        }
       },
       skills: {
-        title: "Compétences"
+        title: "Compétences",
+        programmingLanguages: "Langages de Programmation",
+        machineLearning: "Machine Learning & Deep Learning",
+        webFrameworks: "Frameworks Web",
+        cloudInfrastructure: "Cloud & Infrastructure",
+        dataAnalytics: "Data & Analytics"
+      },
+      education: {
+        title: "Éducation",
+        tekup: {
+          school: "École Supérieure Privée des Technologies et de l'Ingénierie, TEK-UP",
+          degree1: "3ème année en ingénierie, spécialité IA et science des données",
+          period1: "2023 – Présent",
+          degree2: "Cycle préparatoire intégré",
+          period2: "2021-2023"
+        }
+      },
+      leadership: {
+        title: "Leadership & Activités",
+        fortum: {
+          title: "Président, Fortum Junior Entreprise",
+          period: "2024-Présent",
+          description: "Direction de l'organisation et pilotage d'initiatives d'innovation. Organisation d'ateliers IA & Cybersécurité et hackathons."
+        },
+        gameJam: {
+          title: "Organisateur Global Game Jam 2022",
+          company: "Gaming Lab Tek-up",
+          period: "2021-2022",
+          description: "Organisation d'événements internationaux de développement de jeux vidéo."
+        }
       },
       certifications: {
         title: "Certifications",
         download: "Télécharger le certificat",
-        view: "Voir le certificat"
+        view: "Voir le certificat",
+        azure: {
+          title: "Microsoft Certified: Azure AI Fundamentals (AI-900)",
+          description: "Validation des bases de l'IA sur Azure, incluant Computer Vision, NLP et services cognitifs."
+        },
+        oracleFoundations: {
+          title: "Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)",
+          description: "Certification avancée en infrastructure Cloud, incluant l'intégration de l'IA, deep learning, generative AI, et les solutions de Machine Learning sur Oracle Cloud."
+        },
+        oracleGenerative: {
+          title: "Oracle Cloud Infrastructure 2025 Generative AI Professional (1Z0-1127-25)",
+          description: "Certification professionnelle avancée en IA générative sur Oracle Cloud, incluant les LLMs, RAG, agents conversationnels et l'intégration avec Oracle Database 23ai."
+        },
+        neo4j: {
+          title: "Neo4j Certified Professional",
+          description: "Certification professionnelle Neo4j validant l'expertise en bases de données graphiques, requêtes Cypher, modélisation de données relationnelles et développement d'applications graphiques."
+        }
       },
       contact: {
         title: "Travaillons Ensemble",
@@ -82,6 +199,24 @@ export default function PortfolioFr() {
         phone: "Téléphone",
         location: "Localisation",
         contactMe: "Me Contacter"
+      },
+      footer: {
+        rights: "Tous droits réservés."
+      },
+      modals: {
+        emailProvider: "Choisissez votre service d'email",
+        cancel: "Annuler",
+        other: "Autre (App par défaut)",
+        demoTitle: "BiGuard - Démo de l'Application",
+        memoraTitle: "MEMORA 2025 - Rapport du Projet",
+        videoNotSupported: "Votre navigateur ne supporte pas la lecture de vidéos."
+      },
+      images: {
+        awardCeremony: "Slim Chouaib recevant un prix lors de l'événement TEK-UP Clubs 2025",
+        teamPhoto: "Équipe Fortum Junior Entreprise avec Slim Chouaib",
+        teamLabel: "Équipe FJE",
+        speakingEvent: "Slim Chouaib présentant lors de l'événement TEK-UP",
+        speakerLabel: "Conférencier"
       },
       cvFile: "/Slim_Chouaib_CV.pdf"
     },
@@ -112,18 +247,135 @@ export default function PortfolioFr() {
         leadershipDesc: "FJE President"
       },
       experience: {
-        title: "Professional Experience"
+        title: "Professional Experience",
+        biGuard: {
+          title: "AI and Data Engineering Developer",
+          company: "BiGuard - Biware",
+          date: "June - August 2025",
+          description: "Intelligent Financial Assistant Application",
+          tasks: [
+            "Complete development of a budget management web application with automatic recommendations",
+            "Implementation of intelligent clustering to automatically classify transactions",
+            "Design of anomaly detection models to identify suspicious financial behaviors",
+            "Creation of an interactive chatbot to assist users",
+            "Cloud deployment on Microsoft Azure with APIs, databases and pipelines"
+          ],
+          technologies: ["Python", "Scikit-Learn", "Flask", "React.js", "Azure", "SQL", "Plaid API"]
+        },
+        bfpme: {
+          title: "HR Application Developer",
+          company: "Bank for Financing Small and Medium Enterprises (BFPME)",
+          date: "June - August 2024",
+          tasks: [
+            "Development of a customizable leave management application",
+            "Implementation of facial recognition for authentication",
+            "Customization of roles, departments and hierarchies"
+          ],
+          technologies: ["Java", "JavaFX", "MySQL", "AWS Rekognition"]
+        }
       },
       projects: {
-        title: "Key Projects"
+        title: "Key Projects",
+        nsmVision: {
+          title: "NSM VISION 2025",
+          subtitle: "SaaS platform for credit management and analysis for SMEs",
+          tasks: [
+            "Cloud solution to automate credit risk analysis via AI and ML",
+            "Interactive dashboards and reporting via Power BI",
+            "Intelligent chatbot to guide credit applications",
+            "Scalable and secure architecture"
+          ],
+          technologies: ["AWS", "Python", "Django", "React.js", "MongoDB", "Power BI"],
+          viewProject: "View project"
+        },
+        memora: {
+          title: "MEMORA 2025",
+          subtitle: "Decision support system for Alzheimer's disease diagnosis",
+          tasks: [
+            "Development of a system to predict Alzheimer's disease from clinical data",
+            "Integration of unsupervised clustering to improve model performance",
+            "Creation of a web interface with Shiny for data input and prediction"
+          ],
+          technologies: ["R", "Random Forest", "KNN", "SVM", "Shiny", "Python"],
+          viewReport: "View report"
+        },
+        aiHealthcare: {
+          title: "AI Healthcare Assistant 2025",
+          subtitle: "Hackathon - AI Assistant for healthcare professionals",
+          tasks: [
+            "Creation of an AI assistant to answer medical questions and assist in diagnostics",
+            "Development of a workflow automation application with AI models",
+            "Task management interface and decision automation"
+          ],
+          technologies: ["Python", "Llama", "OpenAI", "NLP", "Hugging Face", "TensorFlow", "Flask"],
+          viewDemo: "View demo"
+        },
+        biGuard: {
+          title: "BiGuard Application",
+          subtitle: "Intelligent Financial Assistant with ML",
+          tasks: [
+            "Budget management with automatic recommendations",
+            "Intelligent transaction classification through clustering",
+            "Anomaly detection for suspicious behaviors",
+            "Interactive chatbot for financial guidance"
+          ],
+          technologies: ["Python", "Scikit-Learn", "Flask", "React.js", "Azure"],
+          viewProject: "View project",
+          viewDemo: "View demo"
+        }
       },
       skills: {
-        title: "Skills"
+        title: "Skills",
+        programmingLanguages: "Programming Languages",
+        machineLearning: "Machine Learning & Deep Learning",
+        webFrameworks: "Web Frameworks",
+        cloudInfrastructure: "Cloud & Infrastructure",
+        dataAnalytics: "Data & Analytics"
+      },
+      education: {
+        title: "Education",
+        tekup: {
+          school: "Private Higher School of Technologies and Engineering, TEK-UP",
+          degree1: "3rd year in engineering, specializing in AI and data science",
+          period1: "2023 – Present",
+          degree2: "Integrated preparatory cycle",
+          period2: "2021-2023"
+        }
+      },
+      leadership: {
+        title: "Leadership & Activities",
+        fortum: {
+          title: "President, Fortum Junior Enterprise",
+          period: "2024-Present",
+          description: "Organization management and innovation initiatives leadership. Organization of AI & Cybersecurity workshops and hackathons."
+        },
+        gameJam: {
+          title: "Global Game Jam 2022 Organizer",
+          company: "Gaming Lab Tek-up",
+          period: "2021-2022",
+          description: "Organization of international video game development events."
+        }
       },
       certifications: {
         title: "Certifications",
         download: "Download certificate",
-        view: "View certificate"
+        view: "View certificate",
+        azure: {
+          title: "Microsoft Certified: Azure AI Fundamentals (AI-900)",
+          description: "Validation of AI fundamentals on Azure, including Computer Vision, NLP and cognitive services."
+        },
+        oracleFoundations: {
+          title: "Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)",
+          description: "Advanced certification in Cloud infrastructure, including AI integration, deep learning, generative AI, and Machine Learning solutions on Oracle Cloud."
+        },
+        oracleGenerative: {
+          title: "Oracle Cloud Infrastructure 2025 Generative AI Professional (1Z0-1127-25)",
+          description: "Advanced professional certification in generative AI on Oracle Cloud, including LLMs, RAG, conversational agents and integration with Oracle Database 23ai."
+        },
+        neo4j: {
+          title: "Neo4j Certified Professional",
+          description: "Neo4j professional certification validating expertise in graph databases, Cypher queries, relational data modeling and graph application development."
+        }
       },
       contact: {
         title: "Let's Work Together",
@@ -132,6 +384,24 @@ export default function PortfolioFr() {
         phone: "Phone",
         location: "Location",
         contactMe: "Contact Me"
+      },
+      footer: {
+        rights: "All rights reserved."
+      },
+      modals: {
+        emailProvider: "Choose your email service",
+        cancel: "Cancel",
+        other: "Other (Default App)",
+        demoTitle: "BiGuard - Application Demo",
+        memoraTitle: "MEMORA 2025 - Project Report",
+        videoNotSupported: "Your browser does not support video playback."
+      },
+      images: {
+        awardCeremony: "Slim Chouaib receiving an award at the TEK-UP Clubs 2025 event",
+        teamPhoto: "Fortum Junior Enterprise team with Slim Chouaib",
+        teamLabel: "FJE Team",
+        speakingEvent: "Slim Chouaib presenting at the TEK-UP event",
+        speakerLabel: "Speaker"
       },
       cvFile: "/Slim_Chouaib_Resume.pdf"
     }
@@ -410,7 +680,7 @@ export default function PortfolioFr() {
       {showEmailModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40">
           <div className="bg-white rounded-xl shadow-2xl p-8 w-[90vw] max-w-md animate-fade-in">
-            <h2 className="text-xl font-bold mb-4 text-slate-800 text-center">Choisissez votre service d'email</h2>
+            <h2 className="text-xl font-bold mb-4 text-slate-800 text-center">{t.modals.emailProvider}</h2>
             <div className="flex flex-col gap-3">
               <button
                 className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium hover:scale-105 transition-transform"
@@ -448,14 +718,14 @@ export default function PortfolioFr() {
                   setShowEmailModal(false);
                 }}
               >
-                <Mail className="w-5 h-5" /> Autre (App par défaut)
+                <Mail className="w-5 h-5" /> {t.modals.other}
               </button>
             </div>
             <button
               className="mt-6 w-full py-2 rounded-lg bg-slate-200 text-slate-700 font-medium hover:bg-slate-300 transition-colors"
               onClick={() => setShowEmailModal(false)}
             >
-              Annuler
+              {t.modals.cancel}
             </button>
           </div>
         </div>
@@ -681,7 +951,7 @@ export default function PortfolioFr() {
             <div className="relative">
               <Image
                 src="/images/award-ceremony.png"
-                alt="Slim Chouaib recevant un prix lors de l'événement TEK-UP Clubs 2025"
+                alt={t.images.awardCeremony}
                 width={500}
                 height={400}
                 className="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
@@ -710,29 +980,23 @@ export default function PortfolioFr() {
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
-                    <CardTitle className="text-xl text-slate-800">Développeur IA et Data Engineering</CardTitle>
-                    <CardDescription className="text-lg font-medium text-blue-600">BiGuard - Biware</CardDescription>
+                    <CardTitle className="text-xl text-slate-800">{t.experience.biGuard.title}</CardTitle>
+                    <CardDescription className="text-lg font-medium text-blue-600">{t.experience.biGuard.company}</CardDescription>
                   </div>
                   <Badge variant="outline" className="bg-blue-50">
-                    Juin - Août 2025
+                    {t.experience.biGuard.date}
                   </Badge>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 mb-4 font-medium">Application d'Assistant Financier Intelligent</p>
+                <p className="text-slate-600 mb-4 font-medium">{t.experience.biGuard.description}</p>
                 <ul className="list-disc list-inside space-y-2 text-slate-600 mb-6">
-                  <li>
-                    Développement complet d'une application web de gestion budgétaire avec recommandations automatiques
-                  </li>
-                  <li>Mise en place d'un clustering intelligent pour classifier automatiquement les transactions</li>
-                  <li>
-                    Conception de modèles d'anomaly detection pour identifier des comportements financiers suspects
-                  </li>
-                  <li>Création d'un chatbot interactif pour accompagner les utilisateurs</li>
-                  <li>Déploiement cloud sur Microsoft Azure avec APIs, bases de données et pipelines</li>
+                  {t.experience.biGuard.tasks.map((task, index) => (
+                    <li key={index}>{task}</li>
+                  ))}
                 </ul>
                 <div className="flex flex-wrap gap-2">
-                  {["Python", "Scikit-Learn", "Flask", "React.js", "Azure", "SQL", "Plaid API"].map((tech) => (
+                  {t.experience.biGuard.technologies.map((tech) => (
                     <Badge key={tech} variant="secondary" className="hover:scale-105 transition-transform">
                       {tech}
                     </Badge>
@@ -745,24 +1009,24 @@ export default function PortfolioFr() {
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
-                    <CardTitle className="text-xl text-slate-800">Développeur d'Application RH</CardTitle>
+                    <CardTitle className="text-xl text-slate-800">{t.experience.bfpme.title}</CardTitle>
                     <CardDescription className="text-lg font-medium text-green-600">
-                      Banque de Financement des PME (BFPME)
+                      {t.experience.bfpme.company}
                     </CardDescription>
                   </div>
                   <Badge variant="outline" className="bg-green-50">
-                    Juin - Août 2024
+                    {t.experience.bfpme.date}
                   </Badge>
                 </div>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc list-inside space-y-2 text-slate-600 mb-6">
-                  <li>Développement d'une application de gestion des congés personnalisable</li>
-                  <li>Implémentation de la reconnaissance faciale pour l'authentification</li>
-                  <li>Personnalisation des rôles, départements et hiérarchies</li>
+                  {t.experience.bfpme.tasks.map((task, index) => (
+                    <li key={index}>{task}</li>
+                  ))}
                 </ul>
                 <div className="flex flex-wrap gap-2">
-                  {["Java", "JavaFX", "MySQL", "AWS Rekognition"].map((tech) => (
+                  {t.experience.bfpme.technologies.map((tech) => (
                     <Badge key={tech} variant="secondary" className="hover:scale-105 transition-transform">
                       {tech}
                     </Badge>
@@ -787,21 +1051,20 @@ export default function PortfolioFr() {
               <CardHeader className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-t-lg">
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <Brain className="w-6 h-6" />
-                  NSM VISION 2025
+                  {t.projects.nsmVision.title}
                 </CardTitle>
                 <CardDescription className="text-blue-100">
-                  Plateforme SaaS de gestion et d'analyse du crédit pour les PME
+                  {t.projects.nsmVision.subtitle}
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
                 <ul className="list-disc list-inside space-y-2 text-sm text-slate-600 mb-4">
-                  <li>Solution cloud pour automatiser l'analyse des risques de crédit via IA et ML</li>
-                  <li>Tableaux de bord interactifs et reporting via Power BI</li>
-                  <li>Chatbot intelligent pour guider les demandes de crédit</li>
-                  <li>Architecture évolutive et sécurisée</li>
+                  {t.projects.nsmVision.tasks.map((task, index) => (
+                    <li key={index}>{task}</li>
+                  ))}
                 </ul>
                 <div className="flex flex-wrap gap-1 mb-4">
-                  {["AWS", "Python", "Django", "React.js", "MongoDB", "Power BI"].map((tech) => (
+                  {t.projects.nsmVision.technologies.map((tech) => (
                     <Badge key={tech} variant="outline" className="text-xs hover:scale-105 transition-transform">
                       {tech}
                     </Badge>
@@ -815,7 +1078,7 @@ export default function PortfolioFr() {
                   style={{ textDecoration: 'none' }}
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  Voir le projet
+                  {t.projects.nsmVision.viewProject}
                 </a>
               </CardContent>
             </Card>
@@ -824,20 +1087,20 @@ export default function PortfolioFr() {
               <CardHeader className="bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-t-lg">
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <Database className="w-6 h-6" />
-                  MEMORA 2025
+                  {t.projects.memora.title}
                 </CardTitle>
                 <CardDescription className="text-purple-100">
-                  Système d'aide à la décision pour le diagnostic d'Alzheimer
+                  {t.projects.memora.subtitle}
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
                 <ul className="list-disc list-inside space-y-2 text-sm text-slate-600 mb-4">
-                  <li>Prédiction de la maladie d'Alzheimer à partir de données cliniques</li>
-                  <li>Clustering non supervisé pour améliorer les performances</li>
-                  <li>Interface web avec Shiny pour la saisie et prédiction</li>
+                  {t.projects.memora.tasks.map((task, index) => (
+                    <li key={index}>{task}</li>
+                  ))}
                 </ul>
                 <div className="flex flex-wrap gap-1 mb-4">
-                  {["R", "Random Forest", "KNN", "SVM", "Shiny", "Python"].map((tech) => (
+                  {t.projects.memora.technologies.map((tech) => (
                     <Badge key={tech} variant="outline" className="text-xs hover:scale-105 transition-transform">
                       {tech}
                     </Badge>
@@ -852,14 +1115,14 @@ export default function PortfolioFr() {
                     style={{ textDecoration: 'none' }}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    Voir le projet
+                    {t.projects.nsmVision.viewProject}
                   </a>
                   <button
                     onClick={() => setShowMemoraModal(true)}
                     className="inline-flex items-center flex-1 justify-center border border-purple-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-purple-500 text-white hover:bg-purple-600"
                   >
                     <FileText className="w-4 h-4 mr-2" />
-                    Voir le rapport
+                    {t.projects.memora.viewReport}
                   </button>
                 </div>
               </CardContent>
@@ -869,20 +1132,20 @@ export default function PortfolioFr() {
               <CardHeader className="bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-t-lg">
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <Brain className="w-6 h-6" />
-                  AI Healthcare Assistant
+                  {t.projects.aiHealthcare.title}
                 </CardTitle>
                 <CardDescription className="text-green-100">
-                  Hackathon - Assistant IA pour les professionnels de santé
+                  {t.projects.aiHealthcare.subtitle}
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
                 <ul className="list-disc list-inside space-y-2 text-sm text-slate-600 mb-4">
-                  <li>Assistant IA pour répondre aux questions médicales</li>
-                  <li>Automatisation des flux de travail avec modèles IA</li>
-                  <li>Interface de gestion des tâches et automatisation des décisions</li>
+                  {t.projects.aiHealthcare.tasks.map((task, index) => (
+                    <li key={index}>{task}</li>
+                  ))}
                 </ul>
                 <div className="flex flex-wrap gap-1 mb-4">
-                  {["Python", "Llama", "OpenAI", "NLP", "TensorFlow", "Flask"].map((tech) => (
+                  {t.projects.aiHealthcare.technologies.map((tech) => (
                     <Badge key={tech} variant="outline" className="text-xs hover:scale-105 transition-transform">
                       {tech}
                     </Badge>
@@ -896,7 +1159,7 @@ export default function PortfolioFr() {
                   style={{ textDecoration: 'none' }}
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  Voir le projet
+                  {t.projects.nsmVision.viewProject}
                 </a>
               </CardContent>
             </Card>
@@ -905,19 +1168,18 @@ export default function PortfolioFr() {
               <CardHeader className="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-t-lg">
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <Cloud className="w-6 h-6" />
-                  BiGuard Application
+                  {t.projects.biGuard.title}
                 </CardTitle>
-                <CardDescription className="text-orange-100">Assistant Financier Intelligent avec ML</CardDescription>
+                <CardDescription className="text-orange-100">{t.projects.biGuard.subtitle}</CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
                 <ul className="list-disc list-inside space-y-2 text-sm text-slate-600 mb-4">
-                  <li>Gestion budgétaire avec recommandations automatiques</li>
-                  <li>Classification intelligente des transactions par clustering</li>
-                  <li>Détection d'anomalies pour comportements suspects</li>
-                  <li>Chatbot interactif pour guidance financière</li>
+                  {t.projects.biGuard.tasks.map((task, index) => (
+                    <li key={index}>{task}</li>
+                  ))}
                 </ul>
                 <div className="flex flex-wrap gap-1 mb-4">
-                  {["Python", "Scikit-Learn", "Flask", "React.js", "Azure"].map((tech) => (
+                  {t.projects.biGuard.technologies.map((tech) => (
                     <Badge key={tech} variant="outline" className="text-xs hover:scale-105 transition-transform">
                       {tech}
                     </Badge>
@@ -932,14 +1194,14 @@ export default function PortfolioFr() {
                     style={{ textDecoration: 'none' }}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    Voir le projet
+                    {t.projects.biGuard.viewProject}
                   </a>
                   <button
                     onClick={() => setShowDemoModal(true)}
                     className="inline-flex items-center flex-1 justify-center border border-orange-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-orange-500 text-white hover:bg-orange-600"
                   >
                     <Play className="w-4 h-4 mr-2" />
-                    Voir la démo
+                    {t.projects.biGuard.viewDemo}
                   </button>
                 </div>
               </CardContent>
@@ -952,7 +1214,7 @@ export default function PortfolioFr() {
       <section id="skills" className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Compétences Techniques</h2>
+            <h2 className="text-4xl font-bold text-slate-800 mb-4">{t.skills.title}</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto"></div>
           </div>
 
@@ -961,7 +1223,7 @@ export default function PortfolioFr() {
               <CardHeader className="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-lg">
                 <CardTitle className="text-lg flex items-center gap-2">
                   <Code className="w-5 h-5" />
-                  Langages de Programmation
+                  {t.skills.programmingLanguages}
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
@@ -979,7 +1241,7 @@ export default function PortfolioFr() {
               <CardHeader className="bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-t-lg">
                 <CardTitle className="text-lg flex items-center gap-2">
                   <Brain className="w-5 h-5" />
-                  ML & Deep Learning
+                  {t.skills.machineLearning}
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
@@ -997,7 +1259,7 @@ export default function PortfolioFr() {
               <CardHeader className="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-t-lg">
                 <CardTitle className="text-lg flex items-center gap-2">
                   <Code className="w-5 h-5" />
-                  Frameworks Web
+                  {t.skills.webFrameworks}
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
@@ -1015,7 +1277,7 @@ export default function PortfolioFr() {
               <CardHeader className="bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-t-lg">
                 <CardTitle className="text-lg flex items-center gap-2">
                   <Cloud className="w-5 h-5" />
-                  Cloud & Infrastructure
+                  {t.skills.cloudInfrastructure}
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
@@ -1033,7 +1295,7 @@ export default function PortfolioFr() {
               <CardHeader className="bg-gradient-to-r from-indigo-500 to-indigo-600 text-white rounded-t-lg">
                 <CardTitle className="text-lg flex items-center gap-2">
                   <Database className="w-5 h-5" />
-                  Data & Analytics
+                  {t.skills.dataAnalytics}
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
@@ -1072,7 +1334,7 @@ export default function PortfolioFr() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Leadership & Activités</h2>
+            <h2 className="text-4xl font-bold text-slate-800 mb-4">{t.leadership.title}</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto"></div>
           </div>
 
@@ -1082,14 +1344,13 @@ export default function PortfolioFr() {
                 <CardHeader>
                   <CardTitle className="text-lg flex items-center gap-2">
                     <Users className="w-5 h-5 text-purple-600" />
-                    Président, Fortum Junior Entreprise
+                    {t.leadership.fortum.title}
                   </CardTitle>
-                  <CardDescription>2024 - Présent</CardDescription>
+                  <CardDescription>{t.leadership.fortum.period}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600">
-                    Direction de l'organisation et pilotage d'initiatives d'innovation. Organisation récente d'ateliers
-                    IA & Cybersécurité et hackathons, supervision d'événements techniques et coordination d'équipes.
+                    {t.leadership.fortum.description}
                   </p>
                 </CardContent>
               </Card>
@@ -1099,14 +1360,13 @@ export default function PortfolioFr() {
                 <CardHeader>
                   <CardTitle className="text-lg flex items-center gap-2">
                     <Mic className="w-5 h-5 text-orange-600" />
-                    Organisateur Global Game Jam
+                    {t.leadership.gameJam.title}
                   </CardTitle>
-                  <CardDescription>2021 - 2022</CardDescription>
+                  <CardDescription>{t.leadership.gameJam.period}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600">
-                    Organisation d'événements internationaux de développement de jeux vidéo au sein du Gaming Lab
-                    Tek-up, gestion de la logistique et animation d'équipes de développeurs du monde entier.
+                    {t.leadership.gameJam.description}
                   </p>
                 </CardContent>
               </Card>
@@ -1115,7 +1375,7 @@ export default function PortfolioFr() {
             <div className="relative">
               <Image
                 src="/images/team-photo.jpeg"
-                alt="Équipe Fortum Junior Entreprise avec Slim Chouaib"
+                alt={t.images.teamPhoto}
                 width={500}
                 height={400}
                 className="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
@@ -1123,7 +1383,7 @@ export default function PortfolioFr() {
               <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-lg shadow-lg">
                 <div className="flex items-center gap-2">
                   <Users className="w-5 h-5 text-purple-500" />
-                  <span className="text-sm font-medium">Équipe FJE</span>
+                  <span className="text-sm font-medium">{t.images.teamLabel}</span>
                 </div>
               </div>
             </div>
@@ -1133,7 +1393,7 @@ export default function PortfolioFr() {
             <div className="relative order-2 lg:order-1">
               <Image
                 src="/images/speaking-event.png"
-                alt="Slim Chouaib présentant lors de l'événement TEK-UP"
+                alt={t.images.speakingEvent}
                 width={500}
                 height={400}
                 className="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
@@ -1141,7 +1401,7 @@ export default function PortfolioFr() {
               <div className="absolute -top-4 -right-4 bg-white p-4 rounded-lg shadow-lg">
                 <div className="flex items-center gap-2">
                   <Mic className="w-5 h-5 text-blue-500" />
-                  <span className="text-sm font-medium">Conférencier</span>
+                  <span className="text-sm font-medium">{t.images.speakerLabel}</span>
                 </div>
               </div>
             </div>
@@ -1182,7 +1442,7 @@ export default function PortfolioFr() {
       <section id="education" className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Éducation</h2>
+            <h2 className="text-4xl font-bold text-slate-800 mb-4">{t.education.title}</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1193,9 +1453,9 @@ export default function PortfolioFr() {
                     <span className="text-blue-600 font-bold text-sm">3A</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-800">Ingénierie IA et Data Science</h4>
-                    <p className="text-slate-600">TEK-UP - École Supérieure Privée des Technologies</p>
-                    <p className="text-sm text-slate-500">2023 - Présent (3ème Année)</p>
+                    <h4 className="font-semibold text-slate-800">{t.education.tekup.degree1}</h4>
+                    <p className="text-slate-600">{t.education.tekup.school}</p>
+                    <p className="text-sm text-slate-500">{t.education.tekup.period1}</p>
                   </div>
                 </div>
               </CardContent>
@@ -1207,9 +1467,9 @@ export default function PortfolioFr() {
                     <span className="text-green-600 font-bold text-sm">CP</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-800">Cycle Préparatoire Intégré</h4>
-                    <p className="text-slate-600">TEK-UP</p>
-                    <p className="text-sm text-slate-500">2021 - 2023</p>
+                    <h4 className="font-semibold text-slate-800">{t.education.tekup.degree2}</h4>
+                    <p className="text-slate-600">{t.education.tekup.school}</p>
+                    <p className="text-sm text-slate-500">{t.education.tekup.period2}</p>
                   </div>
                 </div>
               </CardContent>
@@ -1240,11 +1500,11 @@ export default function PortfolioFr() {
             </div>
             <div>
               <h4 className="font-semibold text-slate-800 text-lg">
-                Microsoft Certified: Azure AI Fundamentals (AI-900)
+                {t.certifications.azure.title}
               </h4>
               <p className="text-blue-500 font-medium">2025</p>
               <p className="text-slate-500 text-sm mt-2">
-                Validation des bases de l'IA sur Azure, incluant Computer Vision, NLP et services cognitifs.
+                {t.certifications.azure.description}
               </p>
               <div className="flex gap-2 mt-3 flex-wrap">
                 <Badge className="bg-blue-100 text-blue-800">Cloud</Badge>
@@ -1284,12 +1544,11 @@ export default function PortfolioFr() {
             </div>
             <div>
               <h4 className="font-semibold text-slate-800 text-lg">
-                Oracle Cloud Infrastructure 2025 Generative AI Professional (1Z0-1127-25)
+                {t.certifications.oracleGenerative.title}
               </h4>
               <p className="text-red-600 font-medium">2025</p>
               <p className="text-slate-500 text-sm mt-2">
-                Certification professionnelle avancée en IA générative sur Oracle Cloud, incluant les LLMs, RAG, 
-                agents conversationnels et l'intégration avec Oracle Database 23ai.
+                {t.certifications.oracleGenerative.description}
               </p>
               <div className="flex gap-2 mt-3 flex-wrap">
                 <Badge className="bg-red-100 text-red-800">Generative AI</Badge>
@@ -1328,11 +1587,11 @@ export default function PortfolioFr() {
             </div>
             <div>
               <h4 className="font-semibold text-slate-800 text-lg">
-                Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)
+                {t.certifications.oracleFoundations.title}
               </h4>
               <p className="text-orange-500 font-medium">2025</p>
               <p className="text-slate-500 text-sm mt-2">
-                Certification avancée en infrastructure Cloud, incluant l'intégration de l'IA, <i>deep learning</i>, <i>generative AI</i>,<br /> et les solutions de <i>Machine Learning</i> sur Oracle Cloud.
+                {t.certifications.oracleFoundations.description}
               </p>
               <div className="flex gap-2 mt-3 flex-wrap">
                 <Badge className="bg-orange-100 text-orange-800">Cloud</Badge>
@@ -1371,12 +1630,11 @@ export default function PortfolioFr() {
             </div>
             <div>
               <h4 className="font-semibold text-slate-800 text-lg">
-                Neo4j Certified Professional
+                {t.certifications.neo4j.title}
               </h4>
               <p className="text-green-600 font-medium">2025</p>
               <p className="text-slate-500 text-sm mt-2">
-                Certification professionnelle Neo4j validant l'expertise en bases de données graphiques, 
-                requêtes Cypher, modélisation de données relationnelles et développement d'applications graphiques.
+                {t.certifications.neo4j.description}
               </p>
               <div className="flex gap-2 mt-3 flex-wrap">
                 <Badge className="bg-green-100 text-green-800">Graph Database</Badge>
@@ -1477,7 +1735,7 @@ export default function PortfolioFr() {
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-400 py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <p>&copy; 2025 Slim Chouaib. Tous droits réservés.</p>
+          <p>&copy; 2025 Slim Chouaib. {t.footer.rights}</p>
         </div>
       </footer>
 
@@ -1486,7 +1744,7 @@ export default function PortfolioFr() {
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
             <div className="flex justify-between items-center p-4 border-b">
-              <h3 className="text-xl font-semibold text-slate-800">BiGuard - Démo de l'Application</h3>
+              <h3 className="text-xl font-semibold text-slate-800">{t.modals.demoTitle}</h3>
               <button
                 onClick={() => setShowDemoModal(false)}
                 className="text-slate-500 hover:text-slate-700 text-2xl font-bold"
@@ -1502,7 +1760,7 @@ export default function PortfolioFr() {
                 style={{ maxHeight: '70vh' }}
               >
                 <source src="/Biguard Demo.mp4" type="video/mp4" />
-                Votre navigateur ne supporte pas la lecture de vidéos.
+                {t.modals.videoNotSupported}
               </video>
             </div>
           </div>
@@ -1514,7 +1772,7 @@ export default function PortfolioFr() {
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-lg max-w-5xl w-full max-h-[90vh] overflow-hidden">
             <div className="flex justify-between items-center p-4 border-b">
-              <h3 className="text-xl font-semibold text-slate-800">MEMORA 2025 - Rapport du Projet</h3>
+              <h3 className="text-xl font-semibold text-slate-800">{t.modals.memoraTitle}</h3>
               <button
                 onClick={() => setShowMemoraModal(false)}
                 className="text-slate-500 hover:text-slate-700 text-2xl font-bold"
