@@ -169,6 +169,16 @@ export default function PortfolioFr() {
           company: "Gaming Lab Tek-up",
           period: "2021-2022",
           description: "Organisation d'événements internationaux de développement de jeux vidéo."
+        },
+        communication: {
+          title: "Responsable Communication",
+          company: "Interact Club Hannibal (2019-2021)",
+          description: "Direction des stratégies de communication et initiatives de sensibilisation communautaire, développement de compétences en leadership et organisation à travers des projets de service."
+        },
+        recentEvents: {
+          title: "Événements Récents",
+          period: "2025",
+          description: "Organisation de l'événement Fortum Junior Entreprise IA & Cybersécurité avec ateliers et hackathon de 12h, démonstrant des capacités de gestion d'événements et de leadership technique."
         }
       },
       certifications: {
@@ -216,7 +226,8 @@ export default function PortfolioFr() {
         teamPhoto: "Équipe Fortum Junior Entreprise avec Slim Chouaib",
         teamLabel: "Équipe FJE",
         speakingEvent: "Slim Chouaib présentant lors de l'événement TEK-UP",
-        speakerLabel: "Conférencier"
+        speakerLabel: "Conférencier",
+        eventLabel: "TEK-UP Clubs Event 2025"
       },
       cvFile: "/Slim_Chouaib_CV.pdf"
     },
@@ -354,6 +365,16 @@ export default function PortfolioFr() {
           company: "Gaming Lab Tek-up",
           period: "2021-2022",
           description: "Organization of international video game development events."
+        },
+        communication: {
+          title: "Communication Manager",
+          company: "Interact Club Hannibal (2019-2021)",
+          description: "Direction of communication strategies and community awareness initiatives, leadership skills development and organization through service projects."
+        },
+        recentEvents: {
+          title: "Recent Events",
+          period: "2025",
+          description: "Organization of the Fortum Junior Enterprise AI & Cybersecurity event with workshops and 12-hour hackathon, demonstrating event management and technical leadership capabilities."
         }
       },
       certifications: {
@@ -401,7 +422,8 @@ export default function PortfolioFr() {
         teamPhoto: "Fortum Junior Enterprise team with Slim Chouaib",
         teamLabel: "FJE Team",
         speakingEvent: "Slim Chouaib presenting at the TEK-UP event",
-        speakerLabel: "Speaker"
+        speakerLabel: "Speaker",
+        eventLabel: "TEK-UP Clubs Event 2025"
       },
       cvFile: "/Slim_Chouaib_Resume.pdf"
     }
@@ -959,7 +981,7 @@ export default function PortfolioFr() {
               <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg">
                 <div className="flex items-center gap-2">
                   <Award className="w-5 h-5 text-yellow-500" />
-                  <span className="text-sm font-medium">TEK-UP Clubs Event 2025</span>
+                  <span className="text-sm font-medium">{t.images.eventLabel}</span>
                 </div>
               </div>
             </div>
@@ -1409,26 +1431,24 @@ export default function PortfolioFr() {
             <div className="space-y-8 order-1 lg:order-2">
               <Card className="border-l-4 border-l-red-500 hover:shadow-xl transition-all duration-300">
                 <CardHeader>
-                  <CardTitle className="text-lg">Responsable Communication</CardTitle>
-                  <CardDescription>Interact Club Hannibal (2019-2021)</CardDescription>
+                  <CardTitle className="text-lg">{t.leadership.communication.title}</CardTitle>
+                  <CardDescription>{t.leadership.communication.company}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600">
-                    Direction des stratégies de communication et initiatives de sensibilisation communautaire,
-                    développement de compétences en leadership et organisation à travers des projets de service.
+                    {t.leadership.communication.description}
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="border-l-4 border-l-teal-500 hover:shadow-xl transition-all duration-300">
                 <CardHeader>
-                  <CardTitle className="text-lg">Événements Récents</CardTitle>
-                  <CardDescription>2025</CardDescription>
+                  <CardTitle className="text-lg">{t.leadership.recentEvents.title}</CardTitle>
+                  <CardDescription>{t.leadership.recentEvents.period}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600">
-                    Organisation de l'événement Fortum Junior Entreprise IA & Cybersécurité avec ateliers et hackathon
-                    de 12h, démonstrant des capacités de gestion d'événements et de leadership technique.
+                    {t.leadership.recentEvents.description}
                   </p>
                 </CardContent>
               </Card>
