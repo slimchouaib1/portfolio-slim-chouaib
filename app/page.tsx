@@ -1582,13 +1582,18 @@ export default function PortfolioFr() {
                 <Badge className="bg-red-100 text-red-800">Generative AI</Badge>
                 <Badge className="bg-red-100 text-red-800">LLMs</Badge>
                 <Badge className="bg-red-100 text-red-800">RAG</Badge>
+                <Badge className="bg-red-100 text-red-800">Conversational AI</Badge>
                 <Badge className="bg-red-100 text-red-800">Oracle Database 23ai</Badge>
+                <Badge className="bg-red-100 text-red-800">AI Integration</Badge>
+                <Badge className="bg-red-100 text-red-800">Natural Language Processing</Badge>
               </div>
               <a
-                href="/Oracle-Generative-AI-Professional.pdf"
+                href="/Oracle-GenerativeAI-Professional.pdf"
                 download
                 className="inline-flex items-center border border-blue-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-blue-50 mt-4"
                 style={{ textDecoration: 'none' }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Download className="w-4 h-4 mr-2" />
                 {t.certifications.download}
@@ -1629,10 +1634,12 @@ export default function PortfolioFr() {
                 <Badge className="bg-blue-100 text-blue-800">MLOps</Badge>
               </div>
               <a
-                href="/Oracle-Data-Science-Professional.pdf"
+                href="/Oracle-DataScience-Professional.pdf"
                 download
                 className="inline-flex items-center border border-blue-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-blue-50 mt-4"
                 style={{ textDecoration: 'none' }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Download className="w-4 h-4 mr-2" />
                 {t.certifications.download}
