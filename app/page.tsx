@@ -1578,17 +1578,7 @@ export default function PortfolioFr() {
               <p className="text-slate-500 text-sm mt-2">
                 {t.certifications.oracleGenerative.description}
               </p>
-              <div className="flex gap-2 mt-3 flex-wrap">
-                <Badge className="bg-red-100 text-red-800">Generative AI</Badge>
-                <Badge className="bg-red-100 text-red-800">LLMs</Badge>
-                <Badge className="bg-red-100 text-red-800">RAG</Badge>
-                <Badge className="bg-red-100 text-red-800">Oracle Database 23ai</Badge>
-              </div>
-              <div className="mt-4 flex gap-2">
-                <Button variant="outline" size="sm" className="text-sm">
-                  <FileText className="w-4 h-4 mr-1" />
-                  {t.certifications.view}
-                </Button>
+              <div className="mt-4">
                 <Button variant="default" size="sm" className="text-sm bg-blue-600 hover:bg-blue-700">
                   <Download className="w-4 h-4 mr-1" />
                   {t.certifications.download}
@@ -1623,14 +1613,13 @@ export default function PortfolioFr() {
               <div className="flex gap-2 mt-3 flex-wrap">
                 <Badge className="bg-blue-100 text-blue-800">Data Science</Badge>
                 <Badge className="bg-blue-100 text-blue-800">Machine Learning</Badge>
-                <Badge className="bg-blue-100 text-blue-800">MLOps</Badge>
+                <Badge className="bg-blue-100 text-blue-800">Deep Learning</Badge>
                 <Badge className="bg-blue-100 text-blue-800">Python</Badge>
+                <Badge className="bg-blue-100 text-blue-800">Oracle Cloud</Badge>
+                <Badge className="bg-blue-100 text-blue-800">Data Engineering</Badge>
+                <Badge className="bg-blue-100 text-blue-800">MLOps</Badge>
               </div>
-              <div className="mt-4 flex gap-2">
-                <Button variant="outline" size="sm" className="text-sm">
-                  <FileText className="w-4 h-4 mr-1" />
-                  {t.certifications.view}
-                </Button>
+              <div className="mt-4">
                 <Button variant="default" size="sm" className="text-sm bg-blue-600 hover:bg-blue-700">
                   <Download className="w-4 h-4 mr-1" />
                   {t.certifications.download}
