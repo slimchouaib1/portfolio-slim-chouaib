@@ -1578,12 +1578,21 @@ export default function PortfolioFr() {
               <p className="text-slate-500 text-sm mt-2">
                 {t.certifications.oracleGenerative.description}
               </p>
-              <div className="mt-4">
-                <Button variant="default" size="sm" className="text-sm bg-blue-600 hover:bg-blue-700">
-                  <Download className="w-4 h-4 mr-1" />
-                  {t.certifications.download}
-                </Button>
+              <div className="flex gap-2 mt-3 flex-wrap">
+                <Badge className="bg-red-100 text-red-800">Generative AI</Badge>
+                <Badge className="bg-red-100 text-red-800">LLMs</Badge>
+                <Badge className="bg-red-100 text-red-800">RAG</Badge>
+                <Badge className="bg-red-100 text-red-800">Oracle Database 23ai</Badge>
               </div>
+              <a
+                href="/Oracle-Generative-AI-Professional.pdf"
+                download
+                className="inline-flex items-center border border-blue-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-blue-50 mt-4"
+                style={{ textDecoration: 'none' }}
+              >
+                <Download className="w-4 h-4 mr-2" />
+                {t.certifications.download}
+              </a>
             </div>
           </div>
         </CardContent>
@@ -1619,12 +1628,15 @@ export default function PortfolioFr() {
                 <Badge className="bg-blue-100 text-blue-800">Data Engineering</Badge>
                 <Badge className="bg-blue-100 text-blue-800">MLOps</Badge>
               </div>
-              <div className="mt-4">
-                <Button variant="default" size="sm" className="text-sm bg-blue-600 hover:bg-blue-700">
-                  <Download className="w-4 h-4 mr-1" />
-                  {t.certifications.download}
-                </Button>
-              </div>
+              <a
+                href="/Oracle-Data-Science-Professional.pdf"
+                download
+                className="inline-flex items-center border border-blue-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-blue-50 mt-4"
+                style={{ textDecoration: 'none' }}
+              >
+                <Download className="w-4 h-4 mr-2" />
+                {t.certifications.download}
+              </a>
             </div>
           </div>
         </CardContent>
