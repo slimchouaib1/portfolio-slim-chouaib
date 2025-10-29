@@ -197,6 +197,10 @@ export default function PortfolioFr() {
           title: "Oracle Cloud Infrastructure 2025 Generative AI Professional (1Z0-1127-25)",
           description: "Certification professionnelle avancée en IA générative sur Oracle Cloud, incluant les LLMs, RAG, agents conversationnels et l'intégration avec Oracle Database 23ai."
         },
+        oracleDataScience: {
+          title: "Oracle Cloud Infrastructure 2025 Data Science Professional (1Z0-1126-25)",
+          description: "Certification professionnelle avancée en Data Science, couvrant la préparation et l'analyse des données, l'entraînement et l'évaluation de modèles de Machine Learning, le déploiement de modèles en production, ainsi que l'utilisation de techniques modernes de gestion des workflows ML."
+        },
         neo4j: {
           title: "Neo4j Certified Professional",
           description: "Certification professionnelle Neo4j validant l'expertise en bases de données graphiques, requêtes Cypher, modélisation de données relationnelles et développement d'applications graphiques."
@@ -392,6 +396,10 @@ export default function PortfolioFr() {
         oracleGenerative: {
           title: "Oracle Cloud Infrastructure 2025 Generative AI Professional (1Z0-1127-25)",
           description: "Advanced professional certification in generative AI on Oracle Cloud, including LLMs, RAG, conversational agents and integration with Oracle Database 23ai."
+        },
+        oracleDataScience: {
+          title: "Oracle Cloud Infrastructure 2025 Data Science Professional (1Z0-1126-25)",
+          description: "Advanced professional certification in Data Science, covering data preparation and analysis, training and evaluation of Machine Learning models, model deployment in production, and the use of modern ML workflow management techniques."
         },
         neo4j: {
           title: "Neo4j Certified Professional",
@@ -1574,19 +1582,60 @@ export default function PortfolioFr() {
                 <Badge className="bg-red-100 text-red-800">Generative AI</Badge>
                 <Badge className="bg-red-100 text-red-800">LLMs</Badge>
                 <Badge className="bg-red-100 text-red-800">RAG</Badge>
-                <Badge className="bg-red-100 text-red-800">AI Agents</Badge>
-                <Badge className="bg-red-100 text-red-800">Oracle Cloud</Badge>
-                <Badge className="bg-red-100 text-red-800">LangChain</Badge>
+                <Badge className="bg-red-100 text-red-800">Oracle Database 23ai</Badge>
               </div>
-              <a
-                href="/Oracle-GenerativeAI-Professional.pdf"
-                download
-                className="inline-flex items-center border border-red-200 rounded-md px-3 py-2 text-sm font-medium hover:scale-105 transition-transform bg-transparent hover:bg-red-50 mt-4"
-                style={{ textDecoration: 'none' }}
-              >
-                <Download className="w-4 h-4 mr-2" />
-                {t.certifications.download}
-              </a>
+              <div className="mt-4 flex gap-2">
+                <Button variant="outline" size="sm" className="text-sm">
+                  <FileText className="w-4 h-4 mr-1" />
+                  {t.certifications.view}
+                </Button>
+                <Button variant="default" size="sm" className="text-sm bg-blue-600 hover:bg-blue-700">
+                  <Download className="w-4 h-4 mr-1" />
+                  {t.certifications.download}
+                </Button>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Oracle Data Science Professional Card */}
+      <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+        <CardHeader>
+          <CardTitle className="text-lg flex items-center gap-2">
+            <Database className="w-8 h-8 text-blue-500" />
+            Oracle Cloud Infrastructure 2025 Data Science Professional (1Z0-1126-25)
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="pt-6">
+          <div className="flex items-start gap-4">
+            <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
+              <Database className="w-8 h-8 text-blue-500" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-slate-800 text-lg">
+                {t.certifications.oracleDataScience.title}
+              </h4>
+              <p className="text-blue-600 font-medium">2025</p>
+              <p className="text-slate-500 text-sm mt-2">
+                {t.certifications.oracleDataScience.description}
+              </p>
+              <div className="flex gap-2 mt-3 flex-wrap">
+                <Badge className="bg-blue-100 text-blue-800">Data Science</Badge>
+                <Badge className="bg-blue-100 text-blue-800">Machine Learning</Badge>
+                <Badge className="bg-blue-100 text-blue-800">MLOps</Badge>
+                <Badge className="bg-blue-100 text-blue-800">Python</Badge>
+              </div>
+              <div className="mt-4 flex gap-2">
+                <Button variant="outline" size="sm" className="text-sm">
+                  <FileText className="w-4 h-4 mr-1" />
+                  {t.certifications.view}
+                </Button>
+                <Button variant="default" size="sm" className="text-sm bg-blue-600 hover:bg-blue-700">
+                  <Download className="w-4 h-4 mr-1" />
+                  {t.certifications.download}
+                </Button>
+              </div>
             </div>
           </div>
         </CardContent>
