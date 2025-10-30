@@ -1515,10 +1515,9 @@ export default function PortfolioFr() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
       {/* Azure Certification Card */}
       <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-        <CardHeader>
+        <CardHeader className="pb-0">
           <CardTitle className="text-lg flex items-center gap-2">
             <Cloud className="w-8 h-8 text-blue-600" />
-            Microsoft Certified: Azure AI Fundamentals (AI-900)
           </CardTitle>
         </CardHeader>
         <CardContent className="pt-6">
@@ -1559,10 +1558,9 @@ export default function PortfolioFr() {
 
       {/* Oracle Generative AI Professional Certification Card */}
       <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-        <CardHeader>
+        <CardHeader className="pb-0">
           <CardTitle className="text-lg flex items-center gap-2">
             <Brain className="w-8 h-8 text-red-600" />
-            Oracle Cloud Infrastructure 2025 Generative AI Professional (1Z0-1127-25)
           </CardTitle>
         </CardHeader>
         <CardContent className="pt-6">
@@ -1605,10 +1603,9 @@ export default function PortfolioFr() {
 
       {/* Oracle Data Science Professional Card */}
       <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-        <CardHeader>
+        <CardHeader className="pb-0">
           <CardTitle className="text-lg flex items-center gap-2">
             <Database className="w-8 h-8 text-blue-500" />
-            Oracle Cloud Infrastructure 2025 Data Science Professional (1Z0-1126-25)
           </CardTitle>
         </CardHeader>
         <CardContent className="pt-6">
@@ -1651,10 +1648,9 @@ export default function PortfolioFr() {
 
       {/* Oracle AI Foundations Certification Card */}
       <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-        <CardHeader>
+        <CardHeader className="pb-0">
           <CardTitle className="text-lg flex items-center gap-2">
             <Cloud className="w-8 h-8 text-orange-500" />
-            Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)
           </CardTitle>
         </CardHeader>
         <CardContent className="pt-6">
@@ -1694,15 +1690,15 @@ export default function PortfolioFr() {
 
       {/* Neo4j Certification Card */}
       <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-        <CardHeader>
+        <CardHeader className="pb-0">
           <CardTitle className="text-lg flex items-center gap-2">
-            <Database className="w-8 h-8 text-green-600" />
-            Neo4j Certified Professional
+            <Network className="w-8 h-8 text-green-600" />
           </CardTitle>
         </CardHeader>
         <CardContent className="pt-6">
           <div className="flex items-start gap-4">
             <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center">
+              <Network className="w-8 h-8 text-green-600" />
               <Database className="w-8 h-8 text-green-600" />
             </div>
             <div>
