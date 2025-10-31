@@ -67,3 +67,6 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #2563eb, #4f46e5);
 }
+::-webkit-scrollbar-thumb1:hover {
+  background: linear-gradient(to bottom, #2563eb, #4f46e5);
+}
