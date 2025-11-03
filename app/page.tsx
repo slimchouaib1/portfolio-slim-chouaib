@@ -928,7 +928,7 @@ export default function PortfolioFr() {
               {/* Photo principale */}
               <div className="relative z-10 w-80 h-80 mx-auto">
                 <Image
-                  src="/images/slim-portrait.jpg"
+                  src="/images/slim-portrait.png"
                   alt="Slim Chouaib - Portrait professionnel"
                   fill
                   className="rounded-2xl object-cover shadow-2xl hover:scale-105 transition-transform duration-300"
